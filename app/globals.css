@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #07080d;
+  color: #f8fafc;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300;
+  }
+
+  .panel {
+    @apply rounded border border-white/10 bg-white/[0.045];
+  }
+
+  .doc-panel {
+    @apply rounded border border-white/10 bg-slate-950/55 p-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded border font-semibold transition;
+  }
+
+  .btn-primary {
+    @apply border-cyan-300 bg-cyan-300 text-slate-950 hover:bg-cyan-200;
+  }
+
+  .btn-secondary {
+    @apply border-white/15 bg-white/[0.04] text-white hover:border-white/30 hover:bg-white/[0.08];
+  }
+
+  .code-block {
+    @apply overflow-x-auto rounded border border-white/10 bg-[#0b1020] p-4 text-sm leading-6 text-slate-200;
+  }
+}
