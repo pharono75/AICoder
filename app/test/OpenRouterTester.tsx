@@ -106,8 +106,7 @@ export function OpenRouterTester() {
     code({ className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || '');
       const language = match ? match[1] : 'code';
-      // Определяем inline по наличию className
-      const isInline = !className || className === '';
+      const isInline = !className;
       
       if (isInline) {
         return (
